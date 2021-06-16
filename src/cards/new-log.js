@@ -1,4 +1,4 @@
-const { koCheck } = require("../utils")
+
 
 
 const createCardTitle = (username, likes) => {
