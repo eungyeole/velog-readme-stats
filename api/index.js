@@ -1,41 +1,12 @@
-const { request } = require('graphql-request');
 const createCard = require('../cards/new-log');
+const fetchPost = require('../src/fetchers/post-fetcher');
 
 module.exports = async (req, res) => {
     const { name, tag } = req.query;
     res.setHeader('Content-Type', 'image/svg+xml');
-    const endpoint = "https://v2.velog.io/graphql";
-    const query = `
-        query Posts($cursor: ID, $username: String, $temp_only: Boolean, $tag: String, $limit: Int) {
-            posts(cursor: $cursor, username: $username, temp_only: $temp_only, tag: $tag, limit: $limit) {
-            id
-            title
-            short_description
-            thumbnail
-            user {
-                username
-                profile {
-                thumbnail
-                }
-            }
-            url_slug
-            released_at
-            updated_at
-            comments_count
-            tags
-            likes
-            }
-        }
-    `;
-    const variables = {
-        "username": name,
-        "limit" : 1,
-        "tag" : tag
-    }
     try{
-        const { posts } = await request(endpoint, query, variables);
-        if(posts.length > 0) return res.send(createCard(posts[0]))
-        else return res.send("Not Found Post");
+        const post = await fetchPost(name, tag);
+        return res.send(createCard(post))
     } catch(e){
         return res.send(e.message)
     }
