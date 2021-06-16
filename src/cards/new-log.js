@@ -35,7 +35,7 @@ const createCardBottom = ({tags}) => {
             ${
                 tags.map((element) => {
                     const temp=element;
-                    console.log(temp.replaceAll(' ',''));
+                    console.log(temp.replace(' ',''));
                     const size=koCheck(element) ? element.length*12+12 : element.length*9+5;
                     const pos=prev;
                     if(prev+size > 400) return;
