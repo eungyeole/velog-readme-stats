@@ -6,6 +6,13 @@ function request(data) {
       data,
     });
 }
-module.exports={
-    request
+function koCheck(lang){
+    var check = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+    return check.test(lang)
 }
+module.exports={
+    request,
+    koCheck
+
+}
+
