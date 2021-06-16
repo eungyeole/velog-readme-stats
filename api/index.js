@@ -1,4 +1,4 @@
-const createCard = require('../cards/new-log');
+const createCard = require('../src/cards/new-log');
 const fetchPost = require('../src/fetchers/post-fetcher');
 
 module.exports = async (req, res) => {
