@@ -33,8 +33,7 @@ const createCardBottom = ({tags}) => {
             ${
                 tags.map((element) => {
                     const text = element.replaceAll(' ','');
-                    const blankSize = element.length-text.element;
-                    const size=text.length*9+blankSize;
+                    const size=text.length*9;
                     const pos=prev;
                     if(prev+size > 400) return;
                     else prev+=size+5;
