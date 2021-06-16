@@ -2,9 +2,10 @@
   "name": "velog-readme-stats",
   "version": "1.0.0",
   "description": "당신의 Velog 상태를 깃허브에서 확인하세요.",
-  "main": "index.js",
+  "main": "src/api/index.js",
   "scripts": {
-    "start": "node src/apis/index.js",
+    "start": "node src/api/index.js",
+    "dev": "vercel dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

@@ -40,8 +40,9 @@ app.get('/api', async (req, res)=>{
 })
 
 
-module.exports=app;
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
+
+module.exports = app;
