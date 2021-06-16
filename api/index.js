@@ -4,7 +4,9 @@ const createCard = require('../cards/new-log');
 const card = require('../cards/new-log');
 const app = express()
 const port = 3000;
-app.get('/api', async (req, res)=>{
+
+module.exports = async (req, res) => {
+    const { name, tag } = req.query;
     res.setHeader('Content-Type', 'image/svg+xml');
     const endpoint = "https://v2.velog.io/graphql";
     const query = `
@@ -30,19 +32,11 @@ app.get('/api', async (req, res)=>{
         }
     `;
     const variables = {
-        "username": req.query.name,
+        "username": name,
         "limit" : 1,
-        "tag" : req.query.tag
+        "tag" : tag
     }
     const { posts } = await request(endpoint, query, variables);
     if(posts.length > 0) res.send(createCard(posts[0]))
     else res.send("Not Found Post");
-})
-
-
-
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
-})
-
-module.exports = app;
+}
