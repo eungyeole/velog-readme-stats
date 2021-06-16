@@ -1,6 +1,7 @@
 const createCard = require('../src/cards/new-log');
 const fetchPost = require('../src/fetchers/post-fetcher');
 
+
 module.exports = async (req, res) => {
     const { name, tag } = req.query;
     res.setHeader('Content-Type', 'image/svg+xml');

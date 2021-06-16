@@ -1,8 +1,11 @@
-export function request(data, headers) {
+const axios = require('axios')
+function request(data) {
     return axios({
       url: "https://v2.velog.io/graphql",
       method: "post",
-      headers,
       data,
     });
+}
+module.exports={
+    request
 }
