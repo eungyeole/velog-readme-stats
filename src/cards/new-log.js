@@ -32,7 +32,9 @@ const createCardBottom = ({tags}) => {
         <g data-testid="main-card-bottom" transform="translate(0, 40)">
             ${
                 tags.map((element) => {
-                    const size=(element.length*9);
+                    const text = element.replaceAll(' ','');
+                    const blankSize = element.length-text.element;
+                    const size=text.length*9+blankSize;
                     const pos=prev;
                     if(prev+size > 400) return;
                     else prev+=size+5;
