@@ -1,5 +1,5 @@
-# velog-readme-stats
-> 당신의 Velog 포스트를 Github에서 확인하세요.
+# velog-readme-stats란?
+> markdown에서 나의 velog의 정보를 가져올수 있는 도구입니다.
 
 
 # 최신 글 가져오기
