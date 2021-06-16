@@ -1,3 +1,4 @@
+const { koCheck } = require("../utils")
 
 
 const createCardTitle = (username, likes) => {
@@ -35,8 +36,8 @@ const createCardBottom = ({tags}) => {
             ${
                 tags.map((element) => {
                     const text = element.replaceAll(' ','');
-                    // const blankSize = element.length-text.length;
-                    const size=true ? text.length*12+12 : text.length*9+5; //+ blankSize*2;
+                    const blankSize = element.length-text.length;
+                    const size=koCheck(text) ? text.length*12+12 : text.length*9+5; //+ blankSize*2;
                     if(prev+size > 400) return;
                     else prev+=size+5;
                     return`
