@@ -32,7 +32,11 @@ module.exports = async (req, res) => {
         "limit" : 1,
         "tag" : tag
     }
-    const { posts } = await request(endpoint, query, variables);
-    if(posts.length > 0) res.send(createCard(posts[0]))
-    else res.send("Not Found Post");
+    try{
+        const { posts } = await request(endpoint, query, variables);
+        if(posts.length > 0) return res.send(createCard(posts[0]))
+        else return res.send("Not Found Post");
+    } catch(e){
+        return res.send(e.message)
+    }
 }
