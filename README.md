@@ -13,7 +13,7 @@
 ## 특정태그를 가진 최신글 가져오기
 > Option : ```&tag```
 ```
-[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=velopert&tag=github)](https://github.com/eungyeole/velog-readme-stats)
+[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=eungyeole&tag=github)](https://github.com/eungyeole/velog-readme-stats)
 ```
-[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=velopert&tag=꾸미기)](https://github.com/eungyeole/velog-readme-stats)
+[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=eungyeole&tag=github)](https://github.com/eungyeole/velog-readme-stats)
 
