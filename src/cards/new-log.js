@@ -34,7 +34,9 @@ const createCardBottom = ({tags}) => {
         <g data-testid="main-card-bottom" transform="translate(0, 40)">
             ${
                 tags.map((element) => {
-                    const size=koCheck(element) ? element.length*13 : element.length*9;
+                    const text = element.replaceAll(' ','');
+                    const blankSize = element.length-text.length;
+                    const size=(koCheck(text) ? text.length*12+12 : text.length*9+5) + blankSize*2;
                     const pos=prev;
                     if(prev+size > 400) return;
                     else prev+=size+5;
