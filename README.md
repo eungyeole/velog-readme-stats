@@ -4,9 +4,9 @@
 # Velog 뱃지
 > ?name= 의 값을 변경하세요
 ```
-[![Velog's GitHub stats](https://velog-readme-stats-git-develop-eungyeole.vercel.app/api/badge?name=eungyeole)](https://velog.io/@eungyeole) 
+[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api/badge?name=eungyeole)](https://velog.io/@eungyeole) 
 ```
-[![Velog's GitHub stats](https://velog-readme-stats-git-develop-eungyeole.vercel.app/api/badge?name=eungyeole)](https://velog.io/@eungyeole) 
+[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api/badge?name=eungyeole)](https://velog.io/@eungyeole) 
 
 
 # 최신 글 가져오기
