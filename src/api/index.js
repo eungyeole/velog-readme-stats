@@ -39,6 +39,9 @@ app.get('/api', async (req, res)=>{
     else res.send("Not Found Post");
 })
 
+
+module.exports=app;
+
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
