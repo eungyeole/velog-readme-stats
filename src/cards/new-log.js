@@ -1,5 +1,4 @@
-
-
+const { koCheck } = require("../utils")
 
 const createCardTitle = (username, likes) => {
     const likeX = likes > 99 ?  365 : likes > 9 ? 370 : 380
@@ -35,9 +34,8 @@ const createCardBottom = ({tags}) => {
         <g data-testid="main-card-bottom" transform="translate(0, 40)">
             ${
                 tags.map((element) => {
-                    const text = element.replaceAll(' ','');
-                    // const blankSize = element.length-text.length;
-                    const size=true ? text.length*12+12 : text.length*9+5; //+ blankSize*2;
+                    const size=element.length*11;
+                    const pos=prev;
                     if(prev+size > 400) return;
                     else prev+=size+5;
                     return`
