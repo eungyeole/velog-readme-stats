@@ -1,9 +1,5 @@
-const express = require('express');
 const { request } = require('graphql-request');
 const createCard = require('../cards/new-log');
-const card = require('../cards/new-log');
-const app = express()
-const port = 3000;
 
 module.exports = async (req, res) => {
     const { name, tag } = req.query;
