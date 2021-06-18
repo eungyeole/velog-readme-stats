@@ -71,7 +71,7 @@ const createCardDark = (data) => {
     return `
         <svg xmlns="http://www.w3.org/2000/svg" width="450" height="130" viewBox="0 0 450 130" fill="none">
             ${cardStyle}
-            <rect data-testid="card-bg" x="0.5" y="0.5" rx="4.5" height="99%" stroke="#e4e2e2" width="449" fill="#24292e" stroke-opacity="1"/>
+            <rect data-testid="card-bg" x="0.5" y="0.5" rx="4.5" height="99%" stroke="#30363d" width="449" fill="#24292e" stroke-opacity="1"/>
             ${createCardTitle(data.user.username, data.likes)}
             ${createCardBody(data)}
             ${createCardBottom(data)}
