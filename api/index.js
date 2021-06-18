@@ -4,11 +4,11 @@ const fetchPost = require('../src/fetchers/post-fetcher');
 
 
 module.exports = async (req, res) => {
-    const { name, tag, background } = req.query;
+    const { name, tag, color } = req.query;
     res.setHeader('Content-Type', 'image/svg+xml');
     try{
         const post = await fetchPost(name, tag);
-        return res.send(background==='dark' ? createCardDark(post) : createCard(post))
+        return res.send(color==='dark' ? createCardDark(post) : createCard(post))
     } catch(e){
         return res.send(e.message)
     }
