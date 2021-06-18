@@ -17,7 +17,7 @@
 ```
 [![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=eungyeole&tag=github)](https://github.com/eungyeole/velog-readme-stats)
 
-## 카드색 바꾸기 최신글 가져오기
+## 카드색 바꾸기
 > Option : ```&color```
 
 Color Option 
