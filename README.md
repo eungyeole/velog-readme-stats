@@ -35,3 +35,9 @@ Color Option
 [![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=eungyeole&color=dark)](https://github.com/eungyeole/velog-readme-stats)
 
 
+## 상태카드와 최신글 연결하기
+> Option : name, tag 
+카드클릭시 최신글로 리다이렉트 합니다.
+
+
+[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=eungyeole&tag=github)](https://velog-readme-stats.vercel.app/api/redirect?name=eungyeole&tag=github)
