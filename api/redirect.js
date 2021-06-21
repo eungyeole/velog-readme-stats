@@ -6,8 +6,7 @@ module.exports = async (req, res) => {
     try{
         const post = await fetchPost(name, tag);
         const url = new String(`https://velog.io/@${post.user.username}/${post.url_slug}`)
-        res.setHeader('Location', url);
-        res.send('loading...');
+        res.redirect(url)
         return 
     } catch(e){
         return res.send(e.message)
