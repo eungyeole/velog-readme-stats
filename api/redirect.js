@@ -9,7 +9,7 @@ module.exports = async (req, res) => {
         res.setHeader('Location', url);
         res.send('loading...');
         return 
-    } catch(e){s
+    } catch(e){
         return res.send(e.message)
     }
 }
