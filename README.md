@@ -39,5 +39,8 @@ Color Option
 > Option : name, tag 
 카드클릭시 최신글로 리다이렉트 합니다.
 
+```
+https://velog-readme-stats.vercel.app/api/redirect?name=eungyeole&tag=github
+```
 
 [![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=eungyeole&tag=github)](https://velog-readme-stats.vercel.app/api/redirect?name=eungyeole&tag=github)
