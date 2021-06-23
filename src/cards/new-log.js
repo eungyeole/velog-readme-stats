@@ -73,7 +73,7 @@ const createCard = (data) => {
             ${cardStyle}
             <rect data-testid="card-bg" x="0.5" y="0.5" rx="4.5" height="99%" stroke="#e4e2e2" width="449" fill="#fffefe" stroke-opacity="1"/>
             ${createCardTitle(data.user.username, data.likes)}
-            ${createCardBody(data)}
+            ${createCardBottom(data)}
         </svg>
     `
 }
