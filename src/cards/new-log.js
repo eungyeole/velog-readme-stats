@@ -21,7 +21,7 @@ const createCardBody = ({title, short_description}) => {
         <svg data-testid="lang-items" x="25" width="400" height="40" viewBox="0 0 400 40">
             <g transform="translate(0, 0)">
                 <text data-testid="lang-name" x="2" y="15" class="log-title">${title}</text>
-                <text ata-testid="lang-description" x="2" y="35" class="log-description">${replaceAll(short_description, '`', '\`')}</text>
+                <text ata-testid="lang-description" x="2" y="35" class="log-description">${replaceAll(short_description, '`', '"')}</text>
             </g>
         </svg>
         </g>
@@ -73,6 +73,7 @@ const createCard = (data) => {
             ${cardStyle}
             <rect data-testid="card-bg" x="0.5" y="0.5" rx="4.5" height="99%" stroke="#e4e2e2" width="449" fill="#fffefe" stroke-opacity="1"/>
             ${createCardTitle(data.user.username, data.likes)}
+            ${createCardBody(data)}
             ${createCardBottom(data)}
         </svg>
     `
