@@ -21,7 +21,7 @@ const createCardBody = ({title, short_description}) => {
         <svg data-testid="lang-items" x="25" width="400" height="40" viewBox="0 0 400 40">
             <g transform="translate(0, 0)">
                 <text data-testid="lang-name" x="2" y="15" class="log-title">${title}</text>
-                <text ata-testid="lang-description" x="2" y="35" class="log-description">${short_description}</text>
+                <text ata-testid="lang-description" x="2" y="35" class="log-description">${short_description.replaceAll("`", "\`")}</text>
             </g>
         </svg>
         </g>
