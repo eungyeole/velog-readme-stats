@@ -33,7 +33,7 @@ const fetcher = (variables) => {
 async function fetchReadPost(name, slug) {
     try{
         const { data } = await fetcher({"username": name, "url_slug" : slug});
-        return data.data.posts;
+        return data.data.post;
     }catch(e){
         throw new Error(e)
     }

@@ -7,10 +7,8 @@ const fetchReadPost = require('../src/fetchers/readpost-fetcher');
 module.exports = async (req, res) => {
     const { name, tag, color, slug } = req.query;
     res.setHeader('Content-Type', 'image/svg+xml');
-    console.log(slug)
     try{
         const post = !slug ? await fetchPost(name, tag) : await fetchReadPost(name, slug);
-        console.log(post);
         return res.send(color==='dark' ? createCardDark(post) : createCard(post))
     } catch(e){
         return res.send(e.message)
