@@ -64,7 +64,7 @@ const latestCardStyle = `
 const createLatestCard = (data) => {
   console.log(data);
   return `
-        <svg xmlns="http://www.w3.org/2000/svg" width="430" height="130" viewBox="0 0 430 130" fill="none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="430" height="160" viewBox="0 0 430 160" fill="none">
             ${latestCardStyle}
             <rect data-testid="card-bg" x="0.5" y="0.5" rx="4.5" height="99%" stroke="#e4e2e2" width="429" fill="#fffefe" stroke-opacity="1"/>
             ${createLatestCardTitle(data.posts[0].user.username)}
