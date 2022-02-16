@@ -1,7 +1,7 @@
-const createCard = require("../cards/new-log");
-const createCardDark = require("../cards/new-log-black");
-const fetchPost = require("../fetchers/post-fetcher");
-const fetchReadPost = require("../fetchers/readpost-fetcher");
+const createCard = require("../src/cards/new-log");
+const createCardDark = require("../src/cards/new-log-black");
+const fetchPost = require("../src/fetchers/post-fetcher");
+const fetchReadPost = require("../src/fetchers/readpost-fetcher");
 
 module.exports = async (req, res) => {
   const { name, tag, color, slug } = req.query;
