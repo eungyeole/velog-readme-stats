@@ -1,9 +1,8 @@
-const { request } = require("../utils")
+const { request } = require("../utils");
 
 const fetcher = (variables) => {
-    return request(
-        {
-            query: `
+  return request({
+    query: `
             query ReadPost($username: String, $url_slug: String) {
                 post(username: $username, url_slug: $url_slug) {
                   id
@@ -25,19 +24,17 @@ const fetcher = (variables) => {
                 }
               }
             `,
-            variables
-        }
-    )
-}
+    variables,
+  });
+};
 
 async function fetchReadPost(name, slug) {
-    try{
-        const { data } = await fetcher({"username": name, "url_slug" : slug});
-        return data.data.post;
-    }catch(e){
-        throw new Error(e)
-    }
-
+  try {
+    const { data } = await fetcher({ username: name, url_slug: slug });
+    return data.data.post;
+  } catch (e) {
+    throw new Error(e);
+  }
 }
 
-module.exports=fetchReadPost;
+module.exports = fetchReadPost;
