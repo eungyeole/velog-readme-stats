@@ -10,7 +10,7 @@ const createLatestCardTitle = (username) => {
 
 const createLatestCardBody = ({ posts }) => {
   const post_urls = posts.map(
-    (post) => `https://velog.io/@${post[0].user.username}/` + post.url_slug
+    (post) => `https://velog.io/@${post.user.username}/` + post.url_slug
   );
   return `
   <g data-testid="main-card-body" transform="translate(0, 45)">
@@ -54,6 +54,7 @@ const latestCardStyle = `
     </style>
 `;
 const createLatestCard = (data) => {
+  console.log(data);
   return `
         <svg xmlns="http://www.w3.org/2000/svg" width="430" height="130" viewBox="0 0 430 130" fill="none">
             ${latestCardStyle}

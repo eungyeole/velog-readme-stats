@@ -4,7 +4,7 @@ const fetcher = (variables) => {
   return request({
     query: `
             query Posts($cursor: ID, $username: String, $temp_only: Boolean, $tag: String, $limit: Int) {
-                posts(cursor: $cursor, username: $username, temp_only: $temp_only, limit: $limit) {
+                posts(cursor: $cursor, username: $username, temp_only: $temp_only, tag: $tag, limit: $limit) {
                   id
                   title
                   short_description
