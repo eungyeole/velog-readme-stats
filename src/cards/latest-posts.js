@@ -18,19 +18,27 @@ const createLatestCardBody = ({ posts }) => {
       <g transform="translate(0, 0)">
           <text data-testid="lang-list" class="list-style" x="5" y="20">•</text>
           <a href="${post_urls[0]}">
-              <text data-testid="lang-name" x="20" y="20" class="log-title">${posts[0].title}</text>
+              <text data-testid="lang-name" x="20" y="20" class="log-title">${
+                posts[0]?.title || "-"
+              }</text>
           </a>
           <text data-testid="lang-list" class="list-style" x="5" y="43">•</text>
           <a href="${post_urls[1]}">
-              <text data-testid="lang-name" x="20" y="43" class="log-title">${posts[1].title}</text>
+              <text data-testid="lang-name" x="20" y="43" class="log-title">${
+                posts[1]?.title || "-"
+              }</text>
           </a>
           <text data-testid="lang-list" class="list-style" x="5" y="66">•</text>
           <a href="${post_urls[2]}">
-              <text data-testid="lang-name" x="20" y="66" class="log-title">${posts[2].title}</text>
+              <text data-testid="lang-name" x="20" y="66" class="log-title">${
+                posts[2]?.title || "-"
+              }</text>
           </a>
           <text data-testid="lang-list" class="list-style" x="5" y="89">•</text>
           <a href="${post_urls[3]}">
-              <text data-testid="lang-name" x="20" y="89" class="log-title">${posts[3].title}</text>
+              <text data-testid="lang-name" x="20" y="89" class="log-title">${
+                posts[3]?.title || "-"
+              }</text>
           </a>
       </g>
   </svg>
