@@ -1,6 +1,5 @@
 const createLatestPostsCard = require("../cards/latest-posts");
 const fetchPosts = require("../fetchers/posts-fetcher");
-const fetchReadPost = require("../fetchers/readpost-fetcher");
 
 module.exports = async (req, res) => {
   const { name } = req.query;
