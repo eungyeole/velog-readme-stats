@@ -1,8 +1,8 @@
-const { koCheck, replaceAll } = require("../utils")
+const { koCheck, replaceAll } = require("../utils");
 
 const createCardTitle = (username, likes) => {
-    const likeX = likes > 99 ?  365 : likes > 9 ? 370 : 380
-    return `
+  const likeX = likes > 99 ? 365 : likes > 9 ? 370 : 380;
+  return `
         <g data-testid="card-title" transform="translate(25, 35)">
         <g transform="translate(0, 0)">
                 <text x="0" y="0" class="header" data-testid="header">${username}.log</text>
@@ -12,49 +12,55 @@ const createCardTitle = (username, likes) => {
                 <text x="${likeX}" class="heart-count" data-testid="heart-count">${likes}</text>
             </g>
         </g>
-    `
-}
+    `;
+};
 
-const createCardBody = ({title, short_description}) => {
-    return `
+const createCardBody = ({ title, short_description }) => {
+  return `
         <g data-testid="main-card-body" transform="translate(0, 45)">
         <svg data-testid="lang-items" x="25" width="400" height="40" viewBox="0 0 400 40">
             <g transform="translate(0, 0)">
                 <text data-testid="lang-name" x="2" y="15" class="log-title">${title}</text>
-                <text ata-testid="lang-description" x="2" y="35" class="log-description">${replaceAll(short_description, '<', '&lt;')}</text>
+                <text ata-testid="lang-description" x="2" y="35" class="log-description">${replaceAll(
+                  short_description,
+                  "<",
+                  "&lt;"
+                )}</text>
             </g>
         </svg>
         </g>
-    `
-}
+    `;
+};
 
-const createCardBottom = ({tags}) => {
-    let prev=25;
-    return `
+const createCardBottom = ({ tags }) => {
+  let prev = 25;
+  return `
         <g data-testid="main-card-bottom" transform="translate(0, 40)">
-            ${
-                tags.map((element) => {
-                    const text=replaceAll(element, ' ', '');
-                    const blakSize=element.length-text.length;
-                    const size=(koCheck(text) ? text.length*12+12 : text.length*9+5)+blakSize*2;
-                    const pos=prev;
-                    if(prev+size > 400) return;
-                    else prev+=size+5;
-                    return`
+            ${tags.map((element) => {
+              const text = replaceAll(element, " ", "");
+              const blakSize = element.length - text.length;
+              const size =
+                (koCheck(text) ? text.length * 12 + 12 : text.length * 9 + 5) +
+                blakSize * 2;
+              const pos = prev;
+              if (prev + size > 400) return;
+              else prev += size + 5;
+              return `
                         <svg data-testid="lang-items" x="${pos}" width="${size}" viewBox="0 0 ${size} 19">
                             <g style="position: relative;">
                                 <rect width="${size}" height="19.5367" rx="9.76834" fill="#F1F3F5"/>
-                                <text data-testid="lang-name" text-anchor="middle" x="${size/2}" y="13" class="tag-item">${element}</text>
+                                <text data-testid="lang-name" text-anchor="middle" x="${
+                                  size / 2
+                                }" y="13" class="tag-item">${element}</text>
                             </g>
                         </svg>
-                    `
-                })
-            }
+                    `;
+            })}
         </g>
-    `
-}
+    `;
+};
 
-const cardStyle =`
+const cardStyle = `
     <style>
         .header {
             font: bold 14px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -66,9 +72,9 @@ const cardStyle =`
         .tag-item { font-size: 12px; fill: #0CA678;}
         .heart-count { font-size: 12px; fill: #495057;}
     </style>
-`
+`;
 const createCard = (data) => {
-    return `
+  return `
         <svg xmlns="http://www.w3.org/2000/svg" width="450" height="130" viewBox="0 0 450 130" fill="none">
             ${cardStyle}
             <rect data-testid="card-bg" x="0.5" y="0.5" rx="4.5" height="99%" stroke="#e4e2e2" width="449" fill="#fffefe" stroke-opacity="1"/>
@@ -76,7 +82,7 @@ const createCard = (data) => {
             ${createCardBody(data)}
             ${createCardBottom(data)}
         </svg>
-    `
-}
+    `;
+};
 
-module.exports=createCard;
+module.exports = createCard;
