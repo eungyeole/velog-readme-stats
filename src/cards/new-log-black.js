@@ -48,7 +48,7 @@ const createCardBottom = ({ tags }) => {
               return `
                         <svg data-testid="lang-items" x="${pos}" width="${size}" viewBox="0 0 ${size} 19">
                             <g style="position: relative;">
-                                <rect width="${size}" height="19.5367" rx="9.76834" fill="#F1F3F5"/>
+                                <rect width="${size}" height="19.5367" rx="9.76834" fill="#44474B"/>
                                 <text data-testid="lang-name" text-anchor="middle" x="${
                                   size / 2
                                 }" y="13" class="tag-item">${element}</text>
@@ -69,7 +69,7 @@ const cardStyle = `
         }
         .log-title { font: bold 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: white }
         .log-description { font-size: 12px; fill: white}
-        .tag-item { font-size: 12px; fill: #0CA678;}
+        .tag-item { font-size: 12px; fill: #BCBCBC;}
         .heart-count { font-size: 12px; fill: #20c997;}
     </style>
 `;
