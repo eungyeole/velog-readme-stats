@@ -1,5 +1,6 @@
 const createBadge = (name) => {
   const size = name.length * 9;
+
   return `
         <svg width="117" height="34" viewBox="0 0 117 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <style>

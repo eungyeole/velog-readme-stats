@@ -1,4 +1,4 @@
-const { koCheck, replaceAll } = require("../utils");
+const { koCheck, escapeHtml } = require("../utils");
 
 const createCardTitle = (username, likes) => {
   const likeX = likes > 99 ? 365 : likes > 9 ? 370 : 380;
@@ -20,11 +20,11 @@ const createCardBody = ({ title, short_description }) => {
         <g data-testid="main-card-body" transform="translate(0, 45)">
         <svg data-testid="lang-items" x="25" width="400" height="40" viewBox="0 0 400 40">
             <g transform="translate(0, 0)">
-                <text data-testid="lang-name" x="2" y="15" class="log-title">${title}</text>
-                <text ata-testid="lang-description" x="2" y="35" class="log-description">${replaceAll(
-                  short_description,
-                  "<",
-                  "&lt;"
+                <text data-testid="lang-name" x="2" y="15" class="log-title">${escapeHtml(
+                  title
+                )}</text>
+                <text ata-testid="lang-description" x="2" y="35" class="log-description">${escapeHtml(
+                  short_description
                 )}</text>
             </g>
         </svg>
