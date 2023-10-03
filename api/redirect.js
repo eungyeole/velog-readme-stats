@@ -1,6 +1,6 @@
-const fetchPost = require("../src/fetchers/post-fetcher");
+import fetchPost from "../src/fetchers/post-fetcher.js";
 
-module.exports = async (req, res) => {
+export default async (req, res) => {
   const { name, tag } = req.query;
   try {
     const post = await fetchPost(name, tag);

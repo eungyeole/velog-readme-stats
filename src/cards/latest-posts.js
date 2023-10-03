@@ -1,3 +1,5 @@
+import { escapeHtml } from "../utils/index.js";
+
 const createLatestCardTitle = (username) => {
   return `
     <g data-testid="card-title" transform="translate(25, 35)">
@@ -9,37 +11,28 @@ const createLatestCardTitle = (username) => {
 };
 
 const createLatestCardBody = ({ posts }) => {
-  const post_urls = posts.map(
+  const postUrls = posts.map(
     (post) => `https://velog.io/@${post.user.username}/` + post.url_slug
   );
+
   return `
   <g data-testid="main-card-body" transform="translate(0, 45)">
   <svg data-testid="lang-items" x="25" width="400" height="400" viewBox="0 0 400 400">
       <g transform="translate(0, 0)">
-          <text data-testid="lang-list" class="list-style" x="5" y="20">•</text>
-          <a href="${post_urls[0]}">
-              <text data-testid="lang-name" x="20" y="20" class="log-title">${
-                posts[0]?.title || "-"
-              }</text>
-          </a>
-          <text data-testid="lang-list" class="list-style" x="5" y="43">•</text>
-          <a href="${post_urls[1]}">
-              <text data-testid="lang-name" x="20" y="43" class="log-title">${
-                posts[1]?.title || "-"
-              }</text>
-          </a>
-          <text data-testid="lang-list" class="list-style" x="5" y="66">•</text>
-          <a href="${post_urls[2]}">
-              <text data-testid="lang-name" x="20" y="66" class="log-title">${
-                posts[2]?.title || "-"
-              }</text>
-          </a>
-          <text data-testid="lang-list" class="list-style" x="5" y="89">•</text>
-          <a href="${post_urls[3]}">
-              <text data-testid="lang-name" x="20" y="89" class="log-title">${
-                posts[3]?.title || "-"
-              }</text>
-          </a>
+          ${postUrls.map((url, index) => {
+            return `
+              <text data-testid="lang-list" class="list-style" x="5" y="${
+                20 + index * 23
+              }">•</text>
+              <a href="${url}">
+                  <text data-testid="lang-name" x="20" y="${
+                    20 + index * 23
+                  }" class="log-title">${
+              escapeHtml(posts[index]?.title) || "-"
+            }</text>
+              </a>
+            `;
+          })}
       </g>
   </svg>
 </g>
@@ -73,4 +66,4 @@ const createLatestCard = (data) => {
     `;
 };
 
-module.exports = createLatestCard;
+export default createLatestCard;

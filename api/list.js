@@ -1,7 +1,7 @@
-const createLatestPostsCard = require("../src/cards/latest-posts");
-const fetchPosts = require("../src/fetchers/posts-fetcher");
+import createLatestPostsCard from "../src/cards/latest-posts.js";
+import fetchPosts from "../src/fetchers/posts-fetcher.js";
 
-module.exports = async (req, res) => {
+export default async (req, res) => {
   const { name } = req.query;
   res.setHeader("Content-Type", "image/svg+xml");
   try {
