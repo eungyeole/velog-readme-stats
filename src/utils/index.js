@@ -1,21 +1,24 @@
-const axios = require("axios");
-function request(data) {
+import axios from "axios";
+import canvas from "@napi-rs/canvas";
+
+export function request(data) {
   return axios({
     url: "https://v2.velog.io/graphql",
     method: "post",
     data,
   });
 }
-function koCheck(lang) {
+
+export function koCheck(lang) {
   var check = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
   return check.test(lang);
 }
 
-function replaceAll(str, searchStr, replaceStr) {
+export function replaceAll(str, searchStr, replaceStr) {
   return str.split(searchStr).join(replaceStr);
 }
 
-function escapeHtml(text) {
+export function escapeHtml(text) {
   const map = {
     "&": "&amp;",
     "<": "&lt;",
@@ -28,21 +31,10 @@ function escapeHtml(text) {
   });
 }
 
-function getWidth(text) {
-  const textContainer = document.createElement("div");
-  textContainer.innerText = text;
+export function getTextWidth(text, font) {
+  const ctx = canvas.createCanvas(1, 1).getContext("2d");
+  ctx.font = font;
+  const textMetrics = ctx.measureText(text);
 
-  document.body.appendChild(textContainer);
-
-  const width = textContainer.offsetWidth;
-  document.body.removeChild(textContainer);
-
-  return width;
+  return textMetrics.width;
 }
-
-module.exports = {
-  request,
-  koCheck,
-  replaceAll,
-  escapeHtml,
-};

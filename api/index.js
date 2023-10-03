@@ -1,9 +1,9 @@
-const createCard = require("../src/cards/new-log");
-const createCardDark = require("../src/cards/new-log-black");
-const fetchPost = require("../src/fetchers/post-fetcher");
-const fetchReadPost = require("../src/fetchers/readpost-fetcher");
+import createCard from "../src/cards/new-log.js";
+import createCardDark from "../src/cards/new-log-black.js";
+import fetchPost from "../src/fetchers/post-fetcher.js";
+import fetchReadPost from "../src/fetchers/readpost-fetcher.js";
 
-module.exports = async (req, res) => {
+export default async (req, res) => {
   const { name, tag, color, slug } = req.query;
   res.setHeader("Content-Type", "image/svg+xml");
   try {

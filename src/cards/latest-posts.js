@@ -1,4 +1,4 @@
-const { escapeHtml } = require("../utils");
+import { escapeHtml } from "../utils/index.js";
 
 const createLatestCardTitle = (username) => {
   return `
@@ -66,4 +66,4 @@ const createLatestCard = (data) => {
     `;
 };
 
-module.exports = createLatestCard;
+export default createLatestCard;

@@ -1,4 +1,4 @@
-const { koCheck, escapeHtml } = require("../utils");
+import { koCheck, escapeHtml, replaceAll } from "../utils/index.js";
 
 const createCardTitle = (username, likes) => {
   const likeX = likes > 99 ? 365 : likes > 9 ? 370 : 380;
@@ -85,4 +85,4 @@ const createCard = (data) => {
     `;
 };
 
-module.exports = createCard;
+export default createCard;

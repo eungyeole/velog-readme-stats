@@ -1,4 +1,4 @@
-const { request } = require("../utils");
+import { request } from "../utils/index.js";
 
 const fetcher = (variables) => {
   return request({
@@ -37,4 +37,4 @@ async function fetchPost(name, tag) {
   }
 }
 
-module.exports = fetchPost;
+export default fetchPost;

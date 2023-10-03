@@ -1,4 +1,4 @@
-const { koCheck, replaceAll } = require("../utils");
+import { koCheck, replaceAll } from "../utils/index.js";
 
 const createCardTitle = (username, likes) => {
   const likeX = likes > 99 ? 365 : likes > 9 ? 370 : 380;
@@ -85,4 +85,4 @@ const createCardDark = (data) => {
     `;
 };
 
-module.exports = createCardDark;
+export default createCardDark;
