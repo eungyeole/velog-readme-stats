@@ -1,10 +1,10 @@
-import axios from "axios";
-import canvas from "@napi-rs/canvas";
+import axios from 'axios';
+import canvas from '@napi-rs/canvas';
 
-export function request(data) {
+export function request(data, version = 2) {
   return axios({
-    url: "https://v2.velog.io/graphql",
-    method: "post",
+    url: `https://v${version}.velog.io/graphql`,
+    method: 'post',
     data,
   });
 }
@@ -20,11 +20,11 @@ export function replaceAll(str, searchStr, replaceStr) {
 
 export function escapeHtml(text) {
   const map = {
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': "&quot;",
-    "'": "&#039;",
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#039;',
   };
   return text.replace(/[&<>"']/g, function (m) {
     return map[m];
@@ -32,7 +32,7 @@ export function escapeHtml(text) {
 }
 
 export function getTextWidth(text, font) {
-  const ctx = canvas.createCanvas(1, 1).getContext("2d");
+  const ctx = canvas.createCanvas(1, 1).getContext('2d');
   ctx.font = font;
   const textMetrics = ctx.measureText(text);
 
