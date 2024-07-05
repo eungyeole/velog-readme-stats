@@ -1,13 +1,5 @@
 import { request } from '../utils/index.js';
 
-// export type GetPostsInput = {
-//   cursor?: InputMaybe<Scalars['ID']['input']>
-//   limit?: InputMaybe<Scalars['Int']['input']>
-//   tag?: InputMaybe<Scalars['String']['input']>
-//   temp_only?: InputMaybe<Scalars['Boolean']['input']>
-//   username?: InputMaybe<Scalars['String']['input']>
-// }
-
 const fetcher = (variables) => {
   return request(
     {
@@ -44,7 +36,6 @@ async function fetchPost(name, tag) {
     const { data } = await fetcher({ input: { username: name, limit: 1, tag: tag } });
     return data.data.posts[0];
   } catch (e) {
-    console.log(e.response.data.errors);
     throw new Error(e);
   }
 }

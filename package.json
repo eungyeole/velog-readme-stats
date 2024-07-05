@@ -5,6 +5,7 @@
   "main": "./api/index.js",
   "scripts": {
     "start": "node ./api/index.js",
+    "dev:local": "node ./index.js",
     "dev:vercel": "vercel dev --debug",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
