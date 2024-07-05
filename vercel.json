@@ -4,5 +4,15 @@
       "source": "/",
       "destination": "https://github.com/eungyeole/velog-readme-stats"
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/api",
+      "destination": "/api/serverless.ts"
+    },
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/serverless.ts"
+    }
   ]
 }
