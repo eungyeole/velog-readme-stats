@@ -15,7 +15,7 @@ export const postList = async (fastify: FastifyInstance) => {
       try {
         const { posts } = await velogClient.getPosts({
           username: name,
-          limit: 5,
+          limit: 4,
         });
 
         const data = {
