@@ -16,5 +16,7 @@
     "graphql-request": "^6.1.0"
   },
   "type": "module",
-  "devDependencies": {} 
+  "devDependencies": {
+    "express": "^4.19.2"
+  }
 }

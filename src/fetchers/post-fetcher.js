@@ -1,10 +1,19 @@
-import { request } from "../utils/index.js";
+import { request } from '../utils/index.js';
+
+// export type GetPostsInput = {
+//   cursor?: InputMaybe<Scalars['ID']['input']>
+//   limit?: InputMaybe<Scalars['Int']['input']>
+//   tag?: InputMaybe<Scalars['String']['input']>
+//   temp_only?: InputMaybe<Scalars['Boolean']['input']>
+//   username?: InputMaybe<Scalars['String']['input']>
+// }
 
 const fetcher = (variables) => {
-  return request({
-    query: `
-            query Posts($cursor: ID, $username: String, $temp_only: Boolean, $tag: String, $limit: Int) {
-                posts(cursor: $cursor, username: $username, temp_only: $temp_only, tag: $tag, limit: $limit) {
+  return request(
+    {
+      query: `
+            query velogPosts($input: GetPostsInput!) {
+                posts(input: $input) {
                   id
                   title
                   short_description
@@ -24,15 +33,18 @@ const fetcher = (variables) => {
                 }
               }
             `,
-    variables,
-  });
+      variables,
+    },
+    3
+  );
 };
 
 async function fetchPost(name, tag) {
   try {
-    const { data } = await fetcher({ username: name, limit: 1, tag: tag });
+    const { data } = await fetcher({ input: { username: name, limit: 1, tag: tag } });
     return data.data.posts[0];
   } catch (e) {
+    console.log(e.response.data.errors);
     throw new Error(e);
   }
 }
