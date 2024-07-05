@@ -1,4 +1,4 @@
-import { getTextWidth } from "../utils/index.js";
+import { getTextWidth } from "../index.js";
 
 const createBadge = (name) => {
   const size = getTextWidth(name, "13px --apple-system") * 1.1;

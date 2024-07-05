@@ -1,4 +1,4 @@
-import { escapeHtml } from "../utils/index.js";
+import { escapeHtml } from "../index.js";
 
 const createLatestCardTitle = (username) => {
   return `

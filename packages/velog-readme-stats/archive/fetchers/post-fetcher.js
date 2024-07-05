@@ -1,4 +1,4 @@
-import { request } from '../utils/index.js';
+import { request } from "../index.js";
 
 const fetcher = (variables) => {
   return request(
@@ -33,7 +33,9 @@ const fetcher = (variables) => {
 
 async function fetchPost(name, tag) {
   try {
-    const { data } = await fetcher({ input: { username: name, limit: 1, tag: tag } });
+    const { data } = await fetcher({
+      input: { username: name, limit: 1, tag: tag },
+    });
     return data.data.posts[0];
   } catch (e) {
     throw new Error(e);

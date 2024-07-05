@@ -1,23 +1,15 @@
 {
-  "name": "velog-readme-stats",
-  "version": "1.0.0",
-  "description": "당신의 Velog 상태를 깃허브에서 확인하세요.",
-  "main": "./api/index.js",
+  "name": "velogx",
+  "version": "3.0.0",
   "scripts": {
-    "start": "node ./api/index.js",
-    "dev:local": "node ./index.js",
     "dev:vercel": "vercel dev --debug",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {
-    "@napi-rs/canvas": "^0.1.44",
-    "axios": "^1.5.1",
-    "graphql-request": "^6.1.0"
-  },
   "type": "module",
   "devDependencies": {
-    "express": "^4.19.2"
+    "turbo": "^2.0.6",
+    "typescript": "^5.5.3"
   }
 }

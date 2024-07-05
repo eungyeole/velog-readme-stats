@@ -1,4 +1,4 @@
-import { request } from "../utils/index.js";
+import { request } from "../index.js";
 
 const fetcher = (variables) => {
   return request({
