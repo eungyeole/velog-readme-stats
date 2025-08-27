@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@fastify/view':
-        specifier: ^9.1.0
-        version: 9.1.0
+        specifier: ^11.1.1
+        version: 11.1.1
       '@napi-rs/canvas':
         specifier: ^0.1.44
         version: 0.1.53
@@ -85,8 +85,8 @@ packages:
   '@fastify/merge-json-schemas@0.1.1':
     resolution: {integrity: sha512-fERDVz7topgNjtXsJTTW1JKLy0rhuLRcquYqNR9rF7OcVpCa2OVW49ZPDIhaRRCaUuvVxI+N416xUoF76HNSXA==}
 
-  '@fastify/view@9.1.0':
-    resolution: {integrity: sha512-jRTGDljs/uB2p8bf6c1x4stGjP7H84VQkhbtDgCx55Mxf9Fplud5UZIHubvL4BTTX8jNYEzP1FpNAOBi7vibxg==}
+  '@fastify/view@11.1.1':
+    resolution: {integrity: sha512-GiHqT3R2eKJgWmy0s45eELTC447a4+lTM2o+8fSWeKwBe9VToeePuHJcKtOEXPrKGSddGO0RsNayULiS3aeHeQ==}
 
   '@graphql-typed-document-node/core@3.2.0':
     resolution: {integrity: sha512-mB9oAsNCm9aM3/SOv4YtBMqZbYj10R7dkq8byBqxGY/ncFwhf2oQzMV+LCRlWoDSEBJ3COiR1yeDvMtsoOsuFQ==}
@@ -715,8 +715,8 @@ packages:
   fast-uri@2.4.0:
     resolution: {integrity: sha512-ypuAmmMKInk5q7XcepxlnUWDLWv4GFtaJqAzWKqn62IpQ3pejtr5dTVbt3vwqVaMKmkNR55sTT+CqUKIaT21BA==}
 
-  fastify-plugin@4.5.1:
-    resolution: {integrity: sha512-stRHYGeuqpEZTL1Ef0Ovr2ltazUT9g844X5z/zEBFLG8RYlpDiOCIG+ATvYEp+/zmc7sN29mcIMp8gvYplYPIQ==}
+  fastify-plugin@5.0.1:
+    resolution: {integrity: sha512-HCxs+YnRaWzCl+cWRYFnHmeRFyR5GVnJTAaCJQiYzQSDwK9MgJdyAsuL3nh0EWRCYMgQ5MeziymvmAhUHYHDUQ==}
 
   fastify@4.28.1:
     resolution: {integrity: sha512-kFWUtpNr4i7t5vY2EJPCN2KgMVpuqfU4NjnJNCgiNB900oiDeYqaNDRcAfeBbOF5hGixixxcKnOU4KN9z6QncQ==}
@@ -1090,6 +1090,7 @@ packages:
 
   path-match@1.2.4:
     resolution: {integrity: sha512-UWlehEdqu36jmh4h5CWJ7tARp1OEVKGHKm6+dg9qMq5RKUTV5WJrGgaZ3dN2m7WFAXDbjlHzvJvL/IUpy84Ktw==}
+    deprecated: This package is archived and no longer maintained. For support, visit https://github.com/expressjs/express/discussions
 
   path-parse@1.0.7:
     resolution: {integrity: sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==}
@@ -1534,9 +1535,9 @@ snapshots:
     dependencies:
       fast-deep-equal: 3.1.3
 
-  '@fastify/view@9.1.0':
+  '@fastify/view@11.1.1':
     dependencies:
-      fastify-plugin: 4.5.1
+      fastify-plugin: 5.0.1
       toad-cache: 3.7.0
 
   '@graphql-typed-document-node/core@3.2.0(graphql@16.9.0)':
@@ -2190,7 +2191,7 @@ snapshots:
 
   fast-uri@2.4.0: {}
 
-  fastify-plugin@4.5.1: {}
+  fastify-plugin@5.0.1: {}
 
   fastify@4.28.1:
     dependencies:
