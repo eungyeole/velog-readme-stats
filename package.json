@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@types/ejs": "^3.1.5",
-    "@types/node": "^20.14.9",
+    "@types/node": "^24.3.0",
     "@vercel/node": "^5.3.15",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.2",
