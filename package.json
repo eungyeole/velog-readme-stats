@@ -14,7 +14,7 @@
     "@fastify/view": "^11.1.1",
     "@napi-rs/canvas": "^0.1.44",
     "ejs": "^3.1.10",
-    "fastify": "^4.28.1",
+    "fastify": "^5.5.0",
     "graphql-request": "^7.2.0"
   },
   "devDependencies": {
@@ -24,5 +24,6 @@
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.2",
     "vercel": "^34.3.0"
-  }
+  },
+  "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab"
 }
