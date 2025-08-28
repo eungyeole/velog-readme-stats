@@ -12,7 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "@fastify/view": "^11.1.1",
-    "@napi-rs/canvas": "^0.1.44",
+    "@napi-rs/canvas": "^0.1.77",
     "ejs": "^3.1.10",
     "fastify": "^5.5.0",
     "graphql-request": "6.1.0"
