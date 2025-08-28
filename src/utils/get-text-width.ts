@@ -1,4 +1,4 @@
-import canvas from "@napi-rs/canvas";
+import canvas from "canvas";
 
 export function getTextWidth(text: string, font: number) {
   const ctx = canvas.createCanvas(1, 1).getContext("2d");
