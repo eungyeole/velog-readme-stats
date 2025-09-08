@@ -14,7 +14,7 @@
     "@fastify/view": "^9.1.0",
     "@napi-rs/canvas": "^0.1.44",
     "ejs": "^3.1.10",
-    "fastify": "^4.28.1",
+    "fastify": "^5.6.0",
     "graphql-request": "^6.1.0"
   },
   "devDependencies": {
